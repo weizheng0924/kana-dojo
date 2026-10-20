@@ -1,0 +1,118 @@
+:root {
+  --color-bg: #f7f7f2;
+  --color-text: #1b1b1b;
+  --color-primary: #2d6a4f;
+  --color-primary-dark: #1b4332;
+  --color-locked: #d9d9d9;
+  --color-weak: #ffd166;
+  --color-strong: #74c69d;
+  --color-wrong: #e63946;
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, "Hiragino Sans", "Noto Sans TC", sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+#app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px;
+  padding-bottom: 48px;
+}
+
+.banner {
+  background: #fff3cd;
+  color: #664d03;
+  padding: 8px 16px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 8px 0;
+}
+
+.btn:active { background: var(--color-primary-dark); }
+
+.btn-secondary {
+  background: #fff;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.kana-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  margin: 12px 0;
+}
+
+.kana-cell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border-radius: 8px;
+  background: var(--color-locked);
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.kana-cell.weak { background: var(--color-weak); }
+.kana-cell.strong { background: var(--color-strong); color: #fff; }
+
+.quiz-kana {
+  font-size: 96px;
+  text-align: center;
+  margin: 32px 0;
+  cursor: pointer;
+}
+
+.option-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.option-btn {
+  min-height: 56px;
+  font-size: 20px;
+  border-radius: var(--radius);
+  border: 2px solid var(--color-primary);
+  background: #fff;
+  color: var(--color-primary);
+}
+
+.option-btn.correct { background: var(--color-strong); color: #fff; border-color: var(--color-strong); }
+.option-btn.wrong { background: var(--color-wrong); color: #fff; border-color: var(--color-wrong); }
+
+.progress-bar {
+  height: 10px;
+  background: var(--color-locked);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 8px 0 16px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--color-primary);
+}
