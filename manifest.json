@@ -1,0 +1,14 @@
+{
+  "name": "50音道場",
+  "short_name": "50音道場",
+  "description": "每日測驗認識日文50音,自動記錄錯題並複習",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f7f2",
+  "theme_color": "#2d6a4f",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
